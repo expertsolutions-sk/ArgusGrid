@@ -1,0 +1,37 @@
+ArgusGrid 0.6.0 (demo package, profile civil)
+
+SK
+1. Dvakrát kliknite na setup.bat. Setup koná sám, bez otázok: stiahne a nainštaluje, čo chýba (PostgreSQL 16,
+   asi 311 MB, do priečinka runtime\; vložený Python 3.12; Microsoft C++ runtime, ak ho Windows nemá - Windows sa
+   raz opýta na schválenie), načíta ukážkový objekt, spustí aplikáciu a otvorí prehliadač. Súbory pochádzajú
+   z pevných adries a kontroluje sa ich SHA-256 (C++ runtime podľa podpisu Microsoftu). Databáza počúva iba na
+   127.0.0.1. Bez siete: súbory vložte do runtime\cache alebo zadajte -LocalCache <priečinok>. Voľby: -Ask
+   (pýtať sa), -CheckOnly, -DryRun, -NoDemo, -NoStart, -NoBrowser, -Port <n>, -DatabaseUrl <url>, -EmbeddedPython.
+   Po úspešnom dokončení sa setup.bat a setup.ps1 sám vymaže.
+2. Incidenty: start.bat (aj setup) spustí popri aplikácii simulátor útoku, ktorý v slučke prehráva hybridný útok,
+   takže incidenty vznikajú, keď sa sysadmin prihlási (Operačná mapa, zoznam incidentov). Bez simulátora:
+   start.bat -NoSimulator; rýchlosť: -SimulatorSpeed <n> (predvolene 2). Ručne: simulate.bat. stop.bat ho zastaví.
+3. Neskôr: start.bat (spustí aj databázu v tomto priečinku). Prihlásenie: sysadmin, heslo je v
+   backend\data\accounts.txt a musí sa hneď zmeniť.
+4. Zastavenie: stop.bat zastaví aplikáciu aj databázu z tohto priečinka (-KeepDatabase ju ponechá bežať).
+   Externá databáza sa nikdy nezastavuje. Vymazanie: stop.bat a potom zmažte celý priečinok.
+
+EN
+1. Double-click setup.bat. It acts on its own, without questions: it downloads and installs what is missing
+   (PostgreSQL 16, about 311 MB, into runtime\; an embedded Python 3.12; the Microsoft C++ runtime when Windows
+   lacks it - Windows asks once for approval), loads the demonstration site, starts the application and opens the
+   browser. Files come from fixed addresses and are checked against pinned SHA-256 values (the C++ runtime by its
+   Microsoft signature). The database listens on 127.0.0.1 only. Offline: put the files into runtime\cache or
+   give -LocalCache <folder>. Options: -Ask (be asked), -CheckOnly, -DryRun, -NoDemo, -NoStart, -NoBrowser,
+   -Port <n>, -DatabaseUrl <url>, -EmbeddedPython. After a fully successful run setup.bat and setup.ps1 delete
+   themselves.
+2. Incidents: start.bat (and setup) also starts the attack simulator next to the application; it plays the hybrid
+   attack in a loop, so incidents are being generated when the sysadmin signs in (Operational map, incident list).
+   Without it: start.bat -NoSimulator; speed: -SimulatorSpeed <n> (default 2). By hand: simulate.bat. stop.bat
+   stops it.
+3. Later: start.bat (it also starts the database of this folder). Sign in as sysadmin; the password is in
+   backend\data\accounts.txt and must be changed at once.
+4. Stop with stop.bat: it stops the application and the database of this folder (-KeepDatabase leaves it running).
+   An external database is never stopped. To remove: stop.bat, then delete the whole folder.
+
+Configuration: backend\config\app.env (ARGUS_PROFILE civil | defense, ARGUS_BIND_HOST, ARGUS_SECURE_COOKIES).

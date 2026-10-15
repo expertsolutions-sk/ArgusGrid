@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ArgusGrid">
+  <rect width="64" height="64" rx="12" fill="#0B0A12"/>
+  <g fill="none" stroke="#8F7DFF" stroke-width="2.4" stroke-linejoin="round">
+    <path d="M32 6l9.5 5.5v11L32 28l-9.5-5.5v-11z"/>
+    <path d="M13 17l9.5 5.5v11L13 39l-9.5-5.5v-11z" transform="translate(6 3)"/>
+    <path d="M13 17l9.5 5.5v11L13 39l-9.5-5.5v-11z" transform="translate(32 3)"/>
+    <path d="M32 28l9.5 5.5v11L32 50l-9.5-5.5v-11z" transform="translate(0 -1)"/>
+  </g>
+  <circle cx="32" cy="35" r="5.5" fill="none" stroke="#FF5CC6" stroke-width="2.4"/>
+  <circle cx="32" cy="35" r="2" fill="#FF5CC6"/>
+</svg>

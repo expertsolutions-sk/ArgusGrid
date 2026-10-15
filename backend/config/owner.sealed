@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "installation_id": "78f3ed36-603d-4413-8c8a-147b17a95bcb",
+  "identifier_digest": "47b23ec3ff5bc8615b115512876f83be666a7125d1ff0d5fc0496c252775559b",
+  "verifier": "$argon2id$v=19$m=65536,t=3,p=4$oOcc+ykeBARna3c7fAfbbw$stDSj/fmvY1Lc6FUiY7ZTML+CJ+TUX0APNY0CQVJ7eo",
+  "checksum": "nslXB8WQgL5WlG2PheCdbFWBJ0dpF/a5+R+D11aJkYM="
+}
